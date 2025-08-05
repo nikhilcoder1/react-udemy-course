@@ -1,0 +1,7 @@
+Topics discussed : https://github.com/acdlite/react-fiber-architecture
+
+1. Core React from react repo on GitHub
+2. React Fiber Architecture (incremental rendering)
+3. Virtual DOM
+4. Reconcilliation
+5. Fiber 
