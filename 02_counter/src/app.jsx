@@ -5,7 +5,7 @@ import './app.css'
 
 export function App() {
 
-  const [counter , setcounter] = useState(0); // counter : is a variable , setcounter : is a function
+  const [counter, setcounter] = useState(0); // counter : is a state variable , setcounter : is a function tht updates the state variable
 
   // let counter = 10;
 
@@ -19,7 +19,7 @@ export function App() {
 
   const subValue = () => {
     setcounter(counter - 1);
-    if(counter <= 0) {
+    if (counter <= 0) {
       setcounter(0);
     }
   }
