@@ -1,6 +1,4 @@
 import { useState } from 'preact/hooks'
-import preactLogo from './assets/preact.svg'
-import viteLogo from '/vite.svg'
 import './app.css'
 
 export function App() {
@@ -24,16 +22,19 @@ export function App() {
     }
   }
 
+  const resetValue = () => {
+    setcounter(0);
+  }
+
   return (
     <div>
-      <h1>React Course {counter} </h1>
       <h2>Counter Value : {counter}</h2>
       <button onClick={addValue}>Add Value</button>
       <button onClick={subValue}>Remove Value</button>
+      <button onClick={resetValue}>Reset Value</button>
       <p>Footer : {counter}</p>
     </div>
   )
 }
-
 
 export default App;
