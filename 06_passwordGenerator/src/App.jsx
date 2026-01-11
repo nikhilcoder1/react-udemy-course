@@ -1,6 +1,75 @@
 import { useState, useCallback, useEffect, useRef } from "react";
 import "./App.css";
 
+/*
+=====================================
+PASSWORD GENERATOR – PROJECT FLOW
+=====================================
+
+1. INITIAL SETUP
+   - Import required React hooks:
+     useState     → manage UI state
+     useCallback  → memoize functions
+     useEffect    → handle side effects
+     useRef       → access DOM elements
+   - Initialize state for:
+     • password length
+     • number inclusion
+     • special character inclusion
+     • generated password
+
+2. STATE MANAGEMENT
+   - length           → controls password size via range input
+   - numberAllowed    → toggles numeric characters
+   - charAllowed      → toggles special characters
+   - password         → stores generated password string
+
+3. PASSWORD GENERATION LOGIC
+   - Base character set starts with uppercase + lowercase letters
+   - Conditionally append:
+     • numbers if numberAllowed is true
+     • special characters if charAllowed is true
+   - Generate random password:
+     • loop runs `length` times
+     • random index selected from character set
+     • character appended to password string
+   - Update password state using setPassword()
+
+4. FUNCTION OPTIMIZATION
+   - generatePassword() is wrapped with useCallback
+     to prevent unnecessary re-creation on every render
+   - Dependencies include:
+     length, numberAllowed, charAllowed
+
+5. SIDE EFFECT HANDLING
+   - useEffect triggers password generation whenever:
+     • length changes
+     • numberAllowed changes
+     • charAllowed changes
+   - Ensures password stays in sync with user preferences
+
+6. COPY TO CLIPBOARD FEATURE
+   - useRef stores reference to password input field
+   - Clipboard API copies password text
+   - Input field is programmatically selected for better UX
+
+7. USER INTERFACE FLOW
+   - Password displayed in read-only input field
+   - Range slider controls password length
+   - Checkboxes toggle numbers and special characters
+   - "Copy" button copies generated password
+
+8. RE-RENDER CYCLE
+   - Any state change → re-render
+   - useEffect → regenerates password
+   - UI updates automatically with new password
+
+=====================================
+END OF FLOW
+=====================================
+*/
+
+
 function App() {
   const [length, setLength] = useState(8);
   const [numberAllowed, setNumberAllowed] = useState(false);
