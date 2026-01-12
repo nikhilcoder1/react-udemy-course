@@ -1,3 +1,1 @@
-import InputBox from "./InputBox";
-
-export default {InputBox};
+export { default as InputBox } from "./InputBox";
