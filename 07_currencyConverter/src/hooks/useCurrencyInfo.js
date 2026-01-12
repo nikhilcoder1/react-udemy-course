@@ -4,13 +4,14 @@ function useCurrencyInfo(currency){
     const [data,setData] = useState({})
 
     useEffect(()=> {
-        fetch(`https://open.er-api.com/v6/latest/{currency}`)
-        .then((res)=>res.json)
-        .then((res)=>setData(res[currency]))
-        console.log(data);
+        fetch(`https://open.er-api.com/v6/latest/USD`)
+        .then((res)=>res.json())
+        .then((res)=>{
+            setData(res.rates)
+        })
+        .catch((error) => console.error("API Error:", error));
     },[currency])
 
-    console.log(data)
     return data;
 }
 
