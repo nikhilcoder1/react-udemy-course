@@ -3,6 +3,76 @@ import { InputBox } from "./components";
 import useCurrencyInfo from "./hooks/useCurrencyInfo";
 import "./App.css";
 
+/*
+=====================================================
+📌 Currency Converter – Project Flow (React)
+=====================================================
+
+1️⃣ App Initialization
+   - App component initializes state variables using useState:
+     • amount            → input amount entered by user
+     • from               → source currency (default: USD)
+     • to                 → target currency (default: INR)
+     • convertedAmount    → final converted value
+
+2️⃣ Custom Hook: useCurrencyInfo
+   - App calls useCurrencyInfo(from)
+   - The hook fetches live exchange rates from:
+       https://open.er-api.com/v6/latest/USD
+   - API returns all currency rates relative to USD
+   - Only the `rates` object is stored and returned
+
+3️⃣ Currency Options Setup
+   - Object.keys(currencyInfo) is used
+   - This dynamically populates currency dropdowns
+   - Ensures dropdowns update automatically if API data changes
+
+4️⃣ InputBox Component (Reusable UI)
+   - Used twice:
+     • "From" input → editable amount + currency
+     • "To" input   → disabled amount + selectable currency
+   - Props control:
+     • amount
+     • selected currency
+     • dropdown options
+     • change handlers
+
+5️⃣ Conversion Logic (Core Formula)
+   - Since API base currency is USD:
+     
+     Conversion Formula:
+       (amount / rateOfFromCurrency) * rateOfToCurrency
+
+   - This normalizes the amount from source currency
+     and converts it into the target currency accurately
+
+6️⃣ Convert Action
+   - Triggered on form submit
+   - Calculates convertedAmount using normalized formula
+   - Updates UI instantly
+
+7️⃣ Swap Functionality
+   - Swaps source and target currencies
+   - Swaps amount and convertedAmount
+   - Maintains correct state synchronization
+
+8️⃣ UI Rendering
+   - Background image applied using inline styles
+   - Tailwind CSS used for layout and responsiveness
+   - Controlled inputs ensure real-time state updates
+
+9️⃣ Result Display
+   - Converted value displayed in "To" InputBox
+   - Conversion button dynamically shows selected currencies
+
+=====================================================
+✔ Project Outcome:
+   A clean, reusable, API-driven currency converter
+   built using React Hooks and modern best practices.
+=====================================================
+*/
+
+
 function App() {
   const [amount, setAmount] = useState(0);
   const [from, setFrom] = useState("USD");
