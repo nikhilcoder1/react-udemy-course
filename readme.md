@@ -78,17 +78,20 @@ This repository covers the following React concepts:
    ```bash
    git clone https://github.com/nikhilcoder1/react-udemy-course.git
 
-2. Navigate into a project folder
+2. **Navigate into a project folder**
+    ```bash
     cd react-udemy-course/02_counter
 
 3. Install dependencies
+    ```bash
     npm install
 
 4. Start the development server
+    ```bash
     npm run dev
 
 or (for CRA-based projects)
-
+    ```bash
     npm start
 
 
