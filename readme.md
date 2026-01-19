@@ -82,33 +82,30 @@ This repository covers the following React concepts:
     ```bash
     cd react-udemy-course/02_counter
 
-3. Install dependencies
+3. **Install dependencies**
     ```bash
     npm install
 
-4. Start the development server
+4. **Start the development server**
     ```bash
     npm run dev
 
-or (for CRA-based projects)
-    ```bash
-    npm start
-
-
 The app will run on localhost (port shown in terminal).
 
-🎯 Purpose of This Repo
+---
 
--> Practice React through real code
+## 🎯 Purpose of This Repo
 
--> Build confidence with core React concepts
+- **Practice React through real code**
 
--> Maintain a revision-ready codebase
+- **Build confidence with core React concepts**
 
--> Serve as a reference for future projects
+- **Maintain a revision-ready codebase**
 
--> Prepare for frontend interviews
+- **Serve as a reference for future projects**
 
-📜 License
+- **Prepare for frontend interviews**
+
+## 📜 License
 
 This project is open-source and intended for educational purposes.
