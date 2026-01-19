@@ -38,6 +38,7 @@ react-udemy-course/
 ├── customReact/               # Custom React practice
 └── README.md
 
+```
 
 > Each project is **independent** and can be run separately.
 
