@@ -22,19 +22,19 @@ Each folder represents a **separate React project or concept demo**:
 
 react-udemy-course/
 │
-├── 01_basic_react/ # Basic React app setup
-├── 01_basic_vite/ # React app using Vite
-├── 02_counter/ # Counter app (state & events)
-├── 03_React_fundamentals.txt # Notes on React fundamentals
-├── 04_tailwind_props/ # Props + Tailwind CSS usage
-├── 05_bgChanger/ # Background color changer app
-├── 06_passwordGenerator/ # Password generator project
-├── 07_currencyConverter/ # Currency converter app
-├── 08_reactRouter/ # React Router example
-├── 09_miniContext/ # Context API basic demo
-├── 10_themeSwitcher/ # Light/Dark theme switcher
-├── 11_todoLocalContext/ # Todo app using local context
-├── customReact/ # Custom React practice
+├── 01_basic_react/            # Basic React app setup
+├── 01_basic_vite/             # React app using Vite
+├── 02_counter/                # Counter app (state & events)
+├── 03_React_fundamentals.txt  # Notes on React fundamentals
+├── 04_tailwind_props/         # Props + Tailwind CSS usage
+├── 05_bgChanger/              # Background color changer app
+├── 06_passwordGenerator/      # Password generator project
+├── 07_currencyConverter/     # Currency converter app
+├── 08_reactRouter/            # React Router example
+├── 09_miniContext/            # Context API basic demo
+├── 10_themeSwitcher/          # Light/Dark theme switcher
+├── 11_todoLocalContext/       # Todo app using local context
+├── customReact/               # Custom React practice
 └── README.md
 
 
